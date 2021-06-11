@@ -1,0 +1,275 @@
+<!--- HEADER SECTION [START]---->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Online Shop</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/b1044a6e93.js" crossorigin="anonymous"></script>
+
+  <link rel="shortcut icon" type="image" href="{% static 'IMG/log.jpg' %}"> <!--- TITLE BER LOGO --->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!--- BOOTSTRAP Connection By CDN--->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/styleSheet.css' %}">
+
+        <style type="text/css">
+          body {margin: 0px; padding: 0px;};
+
+        </style> <!---- CUSTOM CSS ONLY FOR HEADER SECTION ---->
+
+</head>
+
+<body>
+
+
+
+  <!--- Menu Ber / NAV Ber  --->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning" style="background: black !important; border-bottom: 1px solid black !important; font-family: sans-serif;">
+<div class="container">
+
+  <b ><a class="navbar-brand pr-3 text-success" style="font-family: sans-serif;" href="index.html">Online Shop </a></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+    <form class="form-inline my-2 pb-2 pt-2 my-lg-0">
+      <input class="form-control w-50 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <ul class="navbar-nav mr-auto font-weight-bold">
+
+         <li class="nav-item active">
+            <a class="nav-link pr-1" href="{% url 'home' %}"> HOME <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item dropdown pr-1 pl-1">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SHOP </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'item_1' %}"> Item Name - 1 </a>
+              <a class="dropdown-item" href="{% url 'item_2' %}"> Item Name - 2 </a>
+              <a class="dropdown-item" href="{% url 'item_3' %}"> Item Name - 3 </a>
+              <a class="dropdown-item" href="{% url 'item_4' %}"> Item Name - 4 </a>
+              <a class="dropdown-item" href="{% url 'item_5' %}"> Item Name - 5 </a>
+              <a class="dropdown-item" href="{% url 'item_6' %}"> Item Name - 6 </a>
+              <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="{% url 'item_s' %}"> Special Item Name</a>
+             </div>
+          </li>
+          <li class="nav-item pr-1 pl-1">
+           <a class="nav-link" href="{% url 'about' %}"> ABOUT</a>
+          </li>
+          <li class="nav-item pr-1 pl-1">
+            <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link pl-1 pr-2" href="#"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+         
+
+    </ul>
+
+  </div>
+</div>
+<span class="hello-msg">Hello, {{request.user}}</span>
+<span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+</nav>
+
+  <!----- NAV Ber END ---->
+
+<!--- HEADER SECTION [END]---->
+
+
+
+
+<!--- PRODUCT PREVIEW SECTION [START] ---->
+
+<section class="container">
+  
+    <div class="row mt-5 mb-5">
+        
+        <div class="col-lg-6 col-md-6 col-12">
+
+
+
+
+<!--- CAROSUL SECTION [START] ------>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="width: 100%;" src="{% static 'IMG/item-1.jpg' %}" alt="Online Shop USA">
+    </div>
+    <div class="carousel-item">
+      <img style="width: 100%;" src="{% static 'IMG/item-2.jpg' %}" alt="Online Shop USA">
+    </div>
+    <div class="carousel-item">
+      <img style="width: 100%;" src="{% static 'IMG/item-3.jpg' %}" alt="Online Shop USA">
+    </div>
+    <div class="carousel-item">
+      <img style="width: 100%;" src="{% static 'IMG/item-4.jpg' %}" alt="Online Shop USA">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+<!--- CAROSUL SECTION [END] ---->
+
+
+
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-1">
+          <h3> 
+            <b>
+              Summer Women Three Piece
+            </b>
+          </h3>
+
+          <p>
+          Size : Can be stitched to Fit upto 50" <br>
+          Brand : Orbit <br>
+          Suit: 3 pcs <br>
+          Type: Un-stitched <br>
+          Country of Origin : Bangladesh <br>
+          Size: Free Size <br>
+          Occasion: Regular & Occasional Wear <br>
+          Wash Care: Dry wash only <br>
+          Color: Same as Picture <br>
+          Orna: 38"-40"(Wide) and 2.25 Yards <br>
+          Salwar: 34" Wide and 2.25 Yards <br>
+          Body: 45" Wide and 2.25 Yards <br>
+          <br>
+          Price : 11,000$
+          </p>
+
+        
+
+        </div>
+
+    </div>
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-12 p-3">
+      
+      <h2 class="m-4 text-center"> More Details About it </h2>
+      <hr class="text-center w-75">
+
+      <p class="text-justify">12 Pro Max comes with a 6.7 inches Super Retina XDR OLED screen which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design.  The back camera is of quad 12+12+12 MP + TOF 3D with12 Pro Max comes with a 6.7 inches Super Retina XDR OLED screen which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design.  The back camera is of quad 12+12+12 MP + TOF 3D with12 Pro Max comes with a 6.7 inches Super Retina XDR OLED screen which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design.  The back camera is of quad 12+12+12 MP + TOF 3D with12 Pro Max comes with a 6.7 inches Super Retina XDR OLED screen which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design.  The back camera is of quad 12+12+12 MP + TOF 3D with.</p>
+      <br>
+      <p >1. 12 Pro Max comes with a 6.7 inches Super Retina XDR.</p>
+      <p>2. 12 Pro Max comes with a 6.7 inches Super Retina XDR.</p>
+      <p>3. 12 Pro Max comes with a 6.7 inches Super Retina XDR.</p>
+      <p>4. 12 Pro Max comes with a 6.7 inches Super Retina XDR.</p>
+      <br>
+      <p class="text-justify">The back camera is of quad 12+12+12 MP + TOF 3D with12 Pro Max comes with a 6.7 inches Super Retina XDR OLED screen which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design. which is one of its main specialties. It has a classical Apple iPhone notch design.  The back camera is of quad 12+12+12 MP + TOF 3D with.</p>
+    </div>
+  </div>
+
+</section>
+
+<!--- PRODUCT PREVIEW SECTION [END] ---->
+
+
+<!---- FOOTER [START] ---->
+
+<footer class="footer">
+  
+  <div class="pt-4 pb-2" style="background: #e4e4e4; border-top: 1px solid black;">
+    <div class="row container mx-auto m-auto">
+      <div class="col-lg-3 col-md-3 col-12 p-2">
+
+        <img class="w-50 p-2 ml-5" id="footerLogo" src="{% static 'IMG/log.jpg' %}">
+        <h2 class="text-center"> Online Shop  </h2>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center">
+        <h3> About Us </h3>
+        <hr class="w-75">
+        <p>Bangladesh is your local guide to cities, towns, and neighborhoods in the United States, providing easy, and neighborhoods in the United States, providing easy... <a class="link text-danger" href="about.html">Learn More.</a></p>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center">
+        <h3> SHOP NOW! </h3>
+        <hr class="w-75">
+            <h5> <a class="link text-dark" href="{% url 'item_1' %}"> Item Name - 1 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_2' %}"> Item Name - 2 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_3' %}"> Item Name - 3 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_4' %}"> Item Name - 4 </a> </h5>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center font-weight-bold">
+        <h3>Menu Ber</h3>
+        <hr class="w-75">
+            <h5> <a class="link text-dark" href="{% url 'home' %}"> Home </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'about' %}"> About </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'contact' %}"> Contact </a> </h5>
+          
+      </div>
+    </div>
+  </div>
+
+
+  <div class="containers">
+    <div class="social-links mt-3 text-center">
+      <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+    <div class="copyright">
+      &copy; Copyright <strong><span>Maruful Tamal</span></strong>
+    </div>
+    <div class="credits">
+     Designed by <a href="#">Maruful Tamal</a>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- jQuery library [FOR BOOTSTRAP] -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS [FOR BOOTSTRAP] -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript [FOR BOOTSTRAP] -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+
+<!---- FOOTER [END] ---->

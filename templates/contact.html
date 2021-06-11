@@ -1,0 +1,369 @@
+<!--- HEADER SECTION [START]---->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Online Shop</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/b1044a6e93.js" crossorigin="anonymous"></script>
+
+  <link rel="shortcut icon" type="image" href="{% static 'IMG/log.jpg' %}"> <!--- TITLE BER LOGO --->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!--- BOOTSTRAP Connection By CDN--->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/styleSheet.css' %}">
+
+        <style type="text/css">
+          body {margin: 0px; padding: 0px;};
+
+        </style> <!---- CUSTOM CSS ONLY FOR HEADER SECTION ---->
+
+</head>
+
+<body>
+
+
+
+  <!--- Menu Ber / NAV Ber  --->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning" style="background: black !important; border-bottom: 1px solid black !important; font-family: sans-serif;">
+<div class="container">
+
+  <b ><a class="navbar-brand pr-3 text-success" style="font-family: sans-serif;" href="index.html">Online Shop </a></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+    <form class="form-inline my-2 pb-2 pt-2 my-lg-0">
+      <input class="form-control w-50 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <ul class="navbar-nav mr-auto font-weight-bold">
+
+         <li class="nav-item active">
+            <a class="nav-link pr-1" href="{% url 'home' %}"> HOME <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item dropdown pr-1 pl-1">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SHOP </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'item_1' %}"> Item Name - 1 </a>
+              <a class="dropdown-item" href="{% url 'item_2' %}"> Item Name - 2 </a>
+              <a class="dropdown-item" href="{% url 'item_3' %}"> Item Name - 3 </a>
+              <a class="dropdown-item" href="{% url 'item_4' %}"> Item Name - 4 </a>
+              <a class="dropdown-item" href="{% url 'item_5' %}"> Item Name - 5 </a>
+              <a class="dropdown-item" href="{% url 'item_6' %}"> Item Name - 6 </a>
+              <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="item-s.html"> Special Item Name</a>
+             </div>
+          </li>
+          <li class="nav-item pr-1 pl-1">
+           <a class="nav-link" href="{% url 'about' %}"> ABOUT</a>
+          </li>
+          <li class="nav-item pr-1 pl-1">
+            <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link pl-1 pr-2" href="#"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+         
+    </ul>
+
+  </div>
+</div>
+<span class="hello-msg">Hello, {{request.user}}</span>
+<span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+</nav>
+
+  <!----- NAV Ber END ---->
+
+<!--- HEADER SECTION [END]---->
+
+
+<div class="carousel-inner">
+  <div class="carousel-item-active">
+  
+    <img style="width: 100%" "height:20%;" src="{% static 'IMG/dat.jpg' %}" alt="Online Shop USA">
+  </div>
+
+<!--- CONTACT SECTION [START] ---->
+
+<!---<section class="contact">
+  
+  <div class="container">
+    <h1 class="text-center p-3 mt-5">CONTACT US</h1> 
+    <hr class="w-50 text-center text-dark">
+
+
+
+      <div class="row">
+        
+        <div class="col-lg-6 col-md-6 col-12">
+          <h3 class="pl-2">Online Shop </h3>
+          <p class="text-left pl-2"> <b>Office Name:</b> <i>Alamin Thripics House</i> </p>
+          <p class="text-left pl-2"> <b>Short Form:</b> <i>Bangladesh</i> </p>       
+        
+          <p class="text-left pl-2"> <b> Country :</b>  <i>Bangladesh</i> </p>       
+               
+          <p class="text-left pl-2"> <b>Capital City:</b> <i>Dhaka</i> </p>       
+          <p class="text-left pl-2"> <b>WEB SITE:</b> <i><a class="link text-dark" href="index.html"> onlineshopusa.com </a></i> </p>
+          <p class="text-left pl-2"> <b>E-mail:</b> <i class="fas fa-envelope">   www.tanvirahmer@gmail.com  </a></i></p>
+          <p class="text-left pl-2"> <b>Phone Number:</b> <i class="fa fa-mobile"> 01783530985 </i></p>       
+          <p class="text-left pl-2"><b>Facebook Page:</b> <i class="fab fa-facebook"><a class="link text-dark" href="https://m.facebook.com/home.php">  Online Shop </a></i> </p>
+
+        </div>---> <!-- ======= Contact Section ======= -->
+     
+      <!--<h1>Contact US</h1>--->
+     <!----<div class="location">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.007322295477!2d90.3738784914948!3d23.755788396418097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8ada2664e21%3A0x3c872fd17bc11ddb!2sDaffodil%20International%20University!5e0!3m2!1sen!2sbd!4v1620412956871!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>--->
+       <!-- ======= Contact Section ======= -->
+       <section id="contact us" class="contact-us">
+        <h1>Contact US</h1>
+        <div class="location">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.007322295477!2d90.3738784914948!3d23.755788396418097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8ada2664e21%3A0x3c872fd17bc11ddb!2sDaffodil%20International%20University!5e0!3m2!1sen!2sbd!4v1620412956871!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+       <div class="row">
+           <div class="contact-col">
+               <div>
+                   <i class="fa fa-home"></i>
+                   <span>
+                       <h5>XYZ Road, ABC Building</h5>
+                       <p>Dhanmondi, Dhaka</p>
+                   </span>
+ 
+               </div>
+
+               <div>
+                <i class="fas fa-home"></i>
+                <span>
+                    <h5>Office Name</h5>
+                    <p>Alamin Thripics House</p>
+                </span>
+  
+            </div>
+ 
+               <div>
+                   <i class="fas fa-envelope"></i>
+                   <span>
+                       <h5>info@marufultamal.com</h5>
+                       <p>Email us your query</p>
+                   </span>
+ 
+               </div>
+ 
+               <div>
+                   <i class="fa fa-phone"></i>
+                   <span>
+                       <h5>+1 01746445559</h5>
+                       <p>Tuesday to sunday, 10AM TO 6PM</p>
+                   </span>
+ 
+               </div>
+
+               <div>
+                <i class="fab fa-facebook"></i>
+                <span>
+                    <h5>Facebook</h5>
+                    <p><a class="link text-dark" href="https://m.facebook.com/home.php">Facebook link</a></p>
+                </span>
+  
+            </div>
+           
+
+              
+              
+              
+ 
+           </div>
+ 
+           <div class="contact-col">
+               <form  action="form_submission" method="post">
+                {% csrf_token %}
+                   <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
+                   <input type="text" class="form-control" id="c_fname" name="c_fname">
+                   <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
+                   <input type="text" class="form-control" id="c_lname" name="c_lname">
+                   <label for="c_email" class="text-black">Email <span class="text-danger">*</span></label>
+                   <input type="text" class="form-control" id="c_email" name="c_email">
+                   <label for="c_subject" class="text-black">Subject <span class="text-danger">*</span></label>
+                   <input type="text" class="form-control" id="c_subject" name="c_subject">
+                   <label for="c_message" class="text-black">Message </label>
+                   <textarea name="c_message" id="c_message" cols="30" rows="7" class="form-control"></textarea>
+
+                   
+                  
+                   <button type="submit" class="hero-btn-red-btn">Send Message</button>
+               </form>
+ 
+           </div>
+       </div>
+ 
+   </section>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---- <div class="row">
+         <div class="contact-col">
+             <div>
+                 <i class="fa fa-home"></i>
+                 <span>
+                     <h5>XYZ Road, ABC Building</h5>
+                     <p>Dhanmondi, Dhaka</p>
+                 </span>
+
+             </div>
+
+             <div>
+              <i class="fas fa-home"></i>
+              <span>
+                  <h5>Office Name</h5>
+                  <p>Alamin Thripics House</p>
+              </span>
+
+          </div>
+
+             <div>
+                 <i class="fas fa-envelope"></i>
+                 <span>
+                     <h5>info@marufultamal.com</h5>
+                     <p>Email us your query</p>
+                 </span>
+
+             </div>
+
+             <div>
+                 <i class="fa fa-phone"></i>
+                 <span>
+                     <h5>+1 01746445559</h5>
+                     <p>Tuesday to sunday, 10AM TO 6PM</p>
+                 </span>
+
+             </div>
+
+
+             <div>
+              <i class="fab fa-facebook"></i>
+              <span>
+                  <h5>Facebook</h5>
+                  <p><a class="link text-dark" href="https://m.facebook.com/home.php">Facebook link</a></p>
+              </span>
+
+          </div>
+         
+            
+            
+
+         </div>
+         
+        <div class="col-lg-6 col-md-6 col-1">
+          <img class="p-2" style="width: 100%" src="{% static 'IMG/contact.png' %}">
+        </div>
+
+        
+     </div>------>
+
+ 
+
+
+ 
+
+
+
+
+<!--- CONTACT SECTION [END] ---->
+
+
+<!---- FOOTER [START] ---->
+
+<footer class="footer">
+  
+  <div class="pt-4 pb-2" style="background: #e4e4e4; border-top: 1px solid black;">
+    <div class="row container mx-auto m-auto">
+      <div class="col-lg-3 col-md-3 col-12 p-2">
+
+        <img class="w-50 p-2 ml-5" id="footerLogo" src="{% static 'IMG/log.jpg' %}">
+        <h2 class="text-center"> Online Shop  </h2>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center">
+        <h3> About Us </h3>
+        <hr class="w-75">
+        <p>Bangladesh is your local guide to cities, towns, and neighborhoods in the United States, providing easy, and neighborhoods in the United States, providing easy... <a class="link text-danger" href="about.html">Learn More.</a></p>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center">
+        <h3> SHOP NOW! </h3>
+        <hr class="w-75">
+            <h5> <a class="link text-dark" href="{% url 'item_1' %}"> Item Name - 1 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_2' %}"> Item Name - 2 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_3' %}"> Item Name - 3 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_4' %}"> Item Name - 4 </a> </h5>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center font-weight-bold">
+        <h3>Menu Ber</h3>
+        <hr class="w-75">
+            <h5> <a class="link text-dark" href="{% url 'home' %}"> Home </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'about' %}"> About </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'contact' %}"> Contact </a> </h5>
+         
+      </div>
+    </div>
+  </div>
+
+
+  <div class="containers">
+    <div class="social-links mt-3 text-center">
+      <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+    <div class="copyright">
+      &copy; Copyright <strong><span>Maruful Tamal</span></strong>
+    </div>
+    <div class="credits">
+     Designed by <a href="#">Maruful Tamal</a>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- jQuery library [FOR BOOTSTRAP] -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS [FOR BOOTSTRAP] -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript [FOR BOOTSTRAP] -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+
+<!---- FOOTER [END] ---->

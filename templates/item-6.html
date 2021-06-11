@@ -1,0 +1,350 @@
+<!--- HEADER SECTION [START]---->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Online Shop </title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/b1044a6e93.js" crossorigin="anonymous"></script>
+
+	<link rel="shortcut icon" type="image" href="{% static 'IMG/log.jpg' %}"> <!--- TITLE BER LOGO --->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!--- BOOTSTRAP Connection By CDN--->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'CSS/styleSheet.css' %}">
+
+				<style type="text/css">
+					body {margin: 0px; padding: 0px;};
+
+				</style> <!---- CUSTOM CSS ONLY FOR HEADER SECTION ---->
+
+</head>
+
+<body>
+
+
+
+	<!--- Menu Ber / NAV Ber  --->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning" style="background: black !important; border-bottom: 1px solid black !important; font-family: sans-serif;">
+<div class="container">
+
+  <b ><a class="navbar-brand pr-3 text-success" style="font-family: sans-serif;" href="index.html">Online Shop</a></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+    <form class="form-inline my-2 pb-2 pt-2 my-lg-0">
+      <input class="form-control w-50 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <ul class="navbar-nav mr-auto font-weight-bold">
+
+     		 <li class="nav-item active">
+    		    <a class="nav-link pr-1" href="{% url 'home' %}"> HOME <span class="sr-only">(current)</span></a>
+    		  </li>
+
+    		  <li class="nav-item dropdown pr-1 pl-1">
+    		    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SHOP </a>
+    		    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    		      <a class="dropdown-item" href="{% url 'item_1' %}"> Item Name - 1 </a>
+    		      <a class="dropdown-item" href="{% url 'item_2' %}"> Item Name - 2 </a>
+    		      <a class="dropdown-item" href="{% url 'item_3' %}"> Item Name - 3 </a>
+    		      <a class="dropdown-item" href="{% url 'item_4' %}"> Item Name - 4 </a>
+    		      <a class="dropdown-item" href="{% url 'item_5' %}"> Item Name - 5 </a>
+    		      <a class="dropdown-item" href="{% url 'item_6' %}"> Item Name - 6 </a>
+    		      <div class="dropdown-divider"></div>
+   		       <a class="dropdown-item" href="{% url 'item_s' %}"> Special Item Name</a>
+       			 </div>
+    		  </li>
+    		  <li class="nav-item pr-1 pl-1">
+   		     <a class="nav-link" href="{% url 'about' %}"> ABOUT</a>
+    		  </li>
+    		  <li class="nav-item pr-1 pl-1">
+    		    <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+    		  </li>
+
+  			  <li class="nav-item">
+  			    <a class="nav-link pl-1 pr-2" href="#"><i class="fas fa-shopping-cart"></i></a>
+  			  </li>
+  			
+
+    </ul>
+
+  </div>
+</div>
+<span class="hello-msg">Hello, {{request.user}}</span>
+<span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+</nav>
+
+	<!----- NAV Ber END ---->
+
+<!--- HEADER SECTION [END]---->
+
+
+<!---  PRODUCTS SECTION [START] ---->
+
+<section>
+	<div class="container">
+		
+		<h1 class="text-center mp-3 m-5"> Item-6 Products </h1>
+
+		<div class="row">
+
+
+			<div class="col-lg-3 col-md-3 col-12 p-2" style="" id="newProduct">
+				<div style="border: 1px solid black; border-radius: 6px; background: whitesmoke;" class="p-2">
+				
+					<img class="w-100" src="{% static 'IMG/item-2Product-1.jpg' %}">
+					<b>Women Three Piece</b>
+					<p>
+						Trends in Three Piece detail — A model Women is .....
+					</p>
+					<p> Price: 12$</p>
+					<a class="link text-light" href="{% url 'product' %}"> 
+						<button class="btn-success p-2 w-100 text-center" style="border-radius: 6px;">
+						Shop Now
+						</button>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-12 p-2" style="" id="newProduct">
+				<div style="border: 1px solid black; border-radius: 6px; background: whitesmoke;" class="p-2">
+				
+					<img class="w-100" src="{% static 'IMG/item-2Product-2.jpg' %}">
+					<b>Women Three Piece</b>
+					<p>
+						Trends in Three Piece detail — A model Women is .....
+					</p>
+					<p> Price: 12$</p>
+					<a class="link text-light" href="{% url 'product' %}"> 
+						<button class="btn-success p-2 w-100 text-center" style="border-radius: 6px;">
+						Shop Now
+						</button>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-12 p-2" style="" id="newProduct">
+				<div style="border: 1px solid black; border-radius: 6px; background: whitesmoke;" class="p-2">
+				
+					<img class="w-100" src="{% static 'IMG/item-2Product-3.jpg' %}">
+					<b>Women Three Piece</b>
+					<p>
+						Trends in Three Piece detail — A model Women is .....
+					</p>
+					<p> Price: 12$</p>
+					<a class="link text-light" href="{% url 'product' %}"> 
+						<button class="btn-success p-2 w-100 text-center" style="border-radius: 6px;">
+						Shop Now
+						</button>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-12 p-2" style="" id="newProduct">
+				<div style="border: 1px solid black; border-radius: 6px; background: whitesmoke;" class="p-2">
+				
+					<img class="w-100" src="{% static 'IMG/item-2Product-4.jpg' %}">
+					<b>Women Three Piece</b>
+					<p>
+						Trends in Three Piece detail — A model Women is .....
+					</p>
+					<p> Price: 12$</p>
+					<a class="link text-light" href="{% url 'product' %}"> 
+						<button class="btn-success p-2 w-100 text-center" style="border-radius: 6px;">
+						Shop Now
+						</button>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-12 p-2" style="" id="newProduct">
+				<div style="border: 1px solid black; border-radius: 6px; background: whitesmoke;" class="p-2">
+				
+					<img class="w-100" src="{% static 'IMG/item-2Product-5.jpg' %}">
+					<b>Women Three Piece</b>
+					<p>
+						Trends in Three Piece detail — A model Women is .....
+					</p>
+					<p> Price: 12$</p>
+					<a class="link text-light" href="{% url 'product' %}"> 
+						<button class="btn-success p-2 w-100 text-center" style="border-radius: 6px;">
+						Shop Now
+						</button>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-12 p-2" style="" id="newProduct">
+				<div style="border: 1px solid black; border-radius: 6px; background: whitesmoke;" class="p-2">
+				
+					<img class="w-100" src="{% static 'IMG/item-2Product-6.jpg' %}">
+					<b>Women Three Piece</b>
+					<p>
+						Trends in Three Piece detail — A model Women is .....
+					</p>
+					<p> Price: 12$</p>
+					<a class="link text-light" href="{% url 'product' %}"> 
+						<button class="btn-success p-2 w-100 text-center" style="border-radius: 6px;">
+						Shop Now
+						</button>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-12 p-2" style="" id="newProduct">
+				<div style="border: 1px solid black; border-radius: 6px; background: whitesmoke;" class="p-2">
+				
+					<img class="w-100" src="{% static 'IMG/item-2Product-7.jpg' %}">
+					<b>Women Three Piece</b>
+					<p>
+						Trends in Three Piece detail — A model Women is .....
+					</p>
+					<p> Price: 12$</p>
+					<a class="link text-light" href="{% url 'product' %}"> 
+						<button class="btn-success p-2 w-100 text-center" style="border-radius: 6px;">
+						Shop Now
+						</button>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-12 p-2" style="" id="newProduct">
+				<div style="border: 1px solid black; border-radius: 6px; background: whitesmoke;" class="p-2">
+				
+					<img class="w-100" src="{% static 'IMG/item-2Product-8.jpg' %}">
+					<b>Women Three Piece</b>
+					<p>
+						Trends in Three Piece detail — A model Women is .....
+					</p>
+					<p> Price: 12$</p>
+					<a class="link text-light" href="{% url 'product' %}"> 
+						<button class="btn-success p-2 w-100 text-center" style="border-radius: 6px;">
+						Shop Now
+						</button>
+					</a>
+
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+</section>
+
+
+<!---  PRODUCTS SECTION [END] ---->
+
+<!---  SUBSCRIBE SECTION [START] ---->
+
+<section class="bg-warning mt-4 mb-4 pt-5 pb-5">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-lg-8 col-md-8 col-12">
+				<p class="text-center p-3" style="font-size: 25px; font-family: cursive;"><b> Subscribe to our website for all the latest update </b></p>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-12">
+				<a class="link text-light" href="https://mailchimp.com/"> <button class="btn-danger w-100 p-2 m-2" style="border: 1px solid black; border-radius: 6px;"> SUBSCRIBE </button> </a>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!---   SUBSCRIBESECTION [END] ---->
+
+<!---- FOOTER [START] ---->
+
+<footer class="footer">
+  
+  <div class="pt-4 pb-2" style="background: #e4e4e4; border-top: 1px solid black;">
+    <div class="row container mx-auto m-auto">
+      <div class="col-lg-3 col-md-3 col-12 p-2">
+
+        <img class="w-50 p-2 ml-5" id="footerLogo" src="IMG/log.jpg">
+        <h2 class="text-center"> Online Shop  </h2>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center">
+        <h3> About Us </h3>
+        <hr class="w-75">
+        <p>Bangladesh is your local guide to cities, towns, and neighborhoods in the United States, providing easy, and neighborhoods in the United States, providing easy... <a class="link text-danger" href="about.html">Learn More.</a></p>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center">
+        <h3> SHOP NOW! </h3>
+        <hr class="w-75">
+            <h5> <a class="link text-dark" href="{% url 'item_1' %}"> Item Name - 1 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_2' %}"> Item Name - 2 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_3' %}"> Item Name - 3 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_4' %}"> Item Name - 4 </a> </h5>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center font-weight-bold">
+        <h3>Menu Ber</h3>
+        <hr class="w-75">
+            <h5> <a class="link text-dark" href="{% url 'home' %}"> Home </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'about' %}"> About </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'contact' %}"> Contact </a> </h5>
+         
+      </div>
+    </div>
+  </div>
+
+
+  <div class="containers">
+    <div class="social-links mt-3 text-center">
+      <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+    <div class="copyright">
+      &copy; Copyright <strong><span>Maruful Tamal</span></strong>
+    </div>
+    <div class="credits">
+     Designed by <a href="#">Maruful Tamal</a>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- jQuery library [FOR BOOTSTRAP] -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS [FOR BOOTSTRAP] -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript [FOR BOOTSTRAP] -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+
+<!---- FOOTER [END] ---->

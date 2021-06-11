@@ -1,0 +1,242 @@
+<!--- HEADER SECTION [START]---->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Online Shop</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/b1044a6e93.js" crossorigin="anonymous"></script>
+
+  <link rel="shortcut icon" type="image" href="{% static 'IMG/log.jpg' %}"> <!--- TITLE BER LOGO --->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!--- BOOTSTRAP Connection By CDN--->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/styleSheet.css' %}">
+
+        <style type="text/css">
+          body {margin: 0px; padding: 0px;};
+
+        </style> <!---- CUSTOM CSS ONLY FOR HEADER SECTION ---->
+
+</head>
+
+<body>
+
+
+
+  <!--- Menu Ber / NAV Ber  --->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning" style="background: black !important; border-bottom: 1px solid black !important; font-family: sans-serif;">
+<div class="container">
+
+  <b ><a class="navbar-brand pr-3 text-success" style="font-family: sans-serif;" href="index.html">Online Shop</a></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+    <form class="form-inline my-2 pb-2 pt-2 my-lg-0">
+      <input class="form-control w-50 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <ul class="navbar-nav mr-auto font-weight-bold">
+
+         <li class="nav-item active">
+            <a class="nav-link pr-1" href="{% url 'home' %}"> HOME <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item dropdown pr-1 pl-1">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SHOP </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'item_1' %}"> Item Name - 1 </a>
+              <a class="dropdown-item" href="{% url 'item_2' %}"> Item Name - 2 </a>
+              <a class="dropdown-item" href="{% url 'item_3' %}"> Item Name - 3 </a>
+              <a class="dropdown-item" href="{% url 'item_4' %}"> Item Name - 4 </a>
+              <a class="dropdown-item" href="{% url 'item_5' %}"> Item Name - 5 </a>
+              <a class="dropdown-item" href="{% url 'item_6' %}"> Item Name - 6 </a>
+              <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="{% url 'item_s' %}"> Special Item Name</a>
+             </div>
+          </li>
+          <li class="nav-item pr-1 pl-1">
+           <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item pr-1 pl-1">
+            <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link pl-1 pr-2" href="#"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+         
+
+    </ul>
+
+  </div>
+</div>
+<span class="hello-msg">Hello, {{request.user}}</span>
+<span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+</nav>
+
+  <!----- NAV Ber END ---->
+
+<!--- HEADER SECTION [END]---->
+
+
+
+
+<!--- ABOUT SECTION [START] ---->
+
+<section>
+  
+  <div class="container-fluid">
+    <h1 class="text-center p-3 mt-5">ABOUT US</h1> 
+    <hr class="w-50 text-center text-dark">
+
+
+
+      <div class="row">
+
+        <div class="col-lg-6 col-md-6 col-12">
+          <img class="p-2" style="width: 100%" src="{% static 'IMG/about.jpg' %}">
+        </div>
+        
+        <div class="col-lg-6 col-md-6 col-12">
+          <h5>Your Local USA Guide</h5>
+          <p class="text-justify">USA is your local guide to cities, towns, and neighborhoods in the United States, providing easy to use and comprehensive local services and information, business information and population demographics, travel and tourism, directory services, and local business and consumer services. Our roadmap of offerings is wide and vast like the land that we cover; however, our team is dedicated to ensure that we have the best possible offering for the United States and we deploy each part of our website only once it has met our high quality standards. Therefore you will see our site grow as more of the services mentioned above are deployed over the upcoming months. We encourage you to check back regularly and watch as USA  provides more and more value and more meaningful impact to your life or your visit to the USA.</p>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-12">
+           <h5>
+             Our Mision
+           </h5>
+           <p class="text-justify">Have a positive and meaningful impact on the lives of people living in the USA or people visiting the USA by making services, offerings and information on the most local level easy to find, digest, and benefit from. Whether you are moving to a new town, choosing a local pre-K school, finding the nearest quality and low cost hotel for you visit to your relative, or making any of a number of daily decisions you know that the input you need comes from the most local level. will keep adding information and services to  to continue to help you with these decisions by putting the right information at your fingertips when you need it most. </p>
+
+            <h5> The Team </h5>
+
+<p class="text-justify"> USA is run by a team of business professionals that have a passion for travel, information, and service. We have run large public companies and small fast paced entrepreneurial enterprises. Our team is diverse in culture, interests and religious beliefs. What brings us together is our common interest in the USA and our desire to make  into the best possible local resource for America.
+
+The website and domain are privately owned and are not operated by or affiliated with any government or municipal authority.  is a publication of World Media Group, LLC.
+
+World Media Group
+
+World Media Group, LLC ("World") is focused on providing innovative websites in the travel, professions, interests, search, local, and e-commerce verticals. World launched the first ever domain accelerator under the leadership of Gary Millin discusses the power of branded domains for developing your business. and can be used to d They work with team to bring leading brands to life that can have a high impact on the world we live in. Examples of World Accelerator sites include
+</p>
+
+
+        </div>
+
+      </div>
+
+
+  </div>
+
+</section>
+
+<!--- ABOUT SECTION [END] ---->
+
+
+
+<!---- FOOTER [START] ---->
+
+<footer class="footer">
+  
+  <div class="pt-4 pb-2" style="background: #e4e4e4; border-top: 1px solid black;">
+    <div class="row container mx-auto m-auto">
+      <div class="col-lg-3 col-md-3 col-12 p-2">
+
+        <img class="w-50 p-2 ml-5" id="footerLogo" src="{% static 'IMG/log.jpg' %}">
+        <h2 class="text-center"> Online Shop </h2>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center">
+        <h3> About Us </h3>
+        <hr class="w-75">
+        <p>Bangladesh is your local guide to cities, towns, and neighborhoods in the United States, providing easy, and neighborhoods in the United States, providing easy... <a class="link text-danger" href="about.html">Learn More.</a></p>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center">
+        <h3> SHOP NOW! </h3>
+        <hr class="w-75">
+            <h5> <a class="link text-dark" href="{% url 'item_1' %}"> Item Name - 1 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_2' %}"> Item Name - 2 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_3' %}"> Item Name - 3 </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'item_4' %}"> Item Name - 4 </a> </h5>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12 p-2 text-center font-weight-bold">
+        <h3>Menu Ber</h3>
+        <hr class="w-75">
+            <h5> <a class="link text-dark" href="{% url 'home' %}"> Home </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'about' %}"> About </a> </h5>
+            <h5> <a class="link text-dark" href="{% url 'contact' %}"> Contact </a> </h5>
+           
+      </div>
+    </div>
+  </div>
+
+
+  <div class="containers">
+    <div class="social-links mt-3 text-center">
+      <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+    <div class="copyright">
+      &copy; Copyright <strong><span>Maruful Tamal</span></strong>
+    </div>
+    <div class="credits">
+     Designed by <a href="#">Maruful Tamal</a>
+    </div>
+  </div>
+</footer><!-- End  Footer -->
+
+
+
+
+ <!----<div class="bg-dark">
+    <div class="container">
+
+    <div class="row">
+      
+      <div class="col-lg-6 col-md-6 col-12 pt-4 pb-3">
+        <p><b><a class="link text-danger" href="https://www.facebook.com/itstudioBangladesh">Copyright 2021 . IT Studio Bangladesh </a></b></p>    
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12"></div>
+      <div class="col-lg-3 col-md-3 col-12" id="visaMaster">
+        <img class="w-50 p-3" src="IMG/visaMaster.jpg">
+      </div>
+    
+    </div>
+    </div>
+  </div>---->
+<!---</footer>--->
+
+
+
+<!-- jQuery library [FOR BOOTSTRAP] -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS [FOR BOOTSTRAP] -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript [FOR BOOTSTRAP] -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+
+<!---- FOOTER [END] ---->
